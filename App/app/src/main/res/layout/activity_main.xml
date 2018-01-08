@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFBE57"
+        tools:context="com.android.thermostat.MainActivity"
+        >
+
+    <ImageView
+            android:id="@+id/thermometer_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/thermometer_image"
+            android:layout_margin="16dp"
+            android:contentDescription="Image of thermometer"
+            android:layout_centerInParent="true"
+            />
+
+    <TextView
+            android:id="@+id/temperature_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:id="@+id/temperature_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/temperature_label"
+            tools:text="26"
+            />
+
+    <LinearLayout
+            android:id="@+id/button_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/thermometer_image"
+            >
+
+        <Button
+                android:id="@+id/button_minus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/round_button"
+                android:text="-"
+                />
+
+        <Button
+                android:id="@+id/button_add"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/round_button"
+                android:text="+"
+                />
+
+    </LinearLayout>
+
+
+    <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_holder"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangular_button"
+            android:layout_margin="8dp"
+            android:text="Reset"
+            />
+
+</RelativeLayout>
