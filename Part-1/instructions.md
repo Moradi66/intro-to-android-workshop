@@ -78,7 +78,4 @@ We also have a `activity_main.xml` file - this will be where we’ll be defining
 Feel free to explore the folders to see what was automatically generated, and to familiarise yourself with the application components/structure.
 
 
-Feel free to explore the folders to see what was automatically generated, and to familiarise yourself with the application components/structure.
-
-
 When you are ready, let’s move on to [Part two](../Part-2/instructions.md).
