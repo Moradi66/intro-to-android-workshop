@@ -31,4 +31,4 @@ Setting Up The Project
 Feel free to explore the folders to see what was automatically generated, and to familiarise yourself with the application components/structure.
 
 
-When you are ready, let’s move on to [Part two](https://github.com/funmia/intro-to-android-workshop/Part-2/instructions.md).
+When you are ready, let’s move on to [Part two](intro-to-android-workshop/Part-2/instructions.md).

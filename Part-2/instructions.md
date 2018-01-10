@@ -26,4 +26,4 @@ If you run the app now, you’ll see all your changes on your emulator/phone.
 
 Nothing happens when you press the buttons!
 
-Also, those buttons are grey and dreary, let’s spice things up a bit in [Part three](https://github.com/funmia/intro-to-android-workshop/Part-3/instructions.md).
+Also, those buttons are grey and dreary, let’s spice things up a bit in [Part three](intro-to-android-workshop/Part-3/instructions.md).
