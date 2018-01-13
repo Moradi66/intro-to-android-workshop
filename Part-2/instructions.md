@@ -7,8 +7,8 @@ Let’s Start Building the App Layout
 1. Open the layout file
 
    Navigate to `activity_main.xml` and double click to open it.
-
-   ![alt text](screenshots/screenshot00001.png “Open the layout file“)
+   
+   ![alt text](screenshots/screenshot00001.png "Open the layout file")
 
    The file contains a `<ConstraintLayout>` and a `<TextView>`
       + Android Studio has automatically generated this. ConstraintLayout is a very powerful layout for complicated screens but we do not need something as complex as a ConstraintLayout yet so let’s change this to `<RelativeLayout>`
@@ -17,7 +17,7 @@ Let’s Start Building the App Layout
 
    Select the start of the `<ConstraintLayout>` and enter `RelativeLayout`. Android Studio should automatically change the closing tag for you.
 
-   ![alt text](screenshots/screenshot00002.png “Change the layout to a Relative layout“)
+   ![alt text](screenshots/screenshot00002.png "Change the layout to a Relative layout")
 
 3. Amend the TextView
 
@@ -41,8 +41,7 @@ Let’s Start Building the App Layout
 
 4. Add another TextView
 
-
-   ![alt text](screenshots/screenshot00003.png “Add another TextView“)
+   ![alt text](screenshots/screenshot00003.png "Add another TextView")
 
    Go to a new line and start typing `<TextView…` - Android Studio should auto-populate the details for you. Press enter to accept.
 
@@ -70,21 +69,21 @@ Let’s Start Building the App Layout
 
    Locate the `res/drawable` folder in the sidebar and right click. You’ll see this:
 
-   ![alt text](screenshots/screenshot00005.png “Right click“)
+   ![alt text](screenshots/screenshot00005.png "Right click")
 
    Close to the bottom there is a _Revel in Finder_ option. Select this. 
-
-   ![alt text](screenshots/screenshot00004.png “Menu options“)
+   
+   ![alt text](screenshots/screenshot00004.png "Menu options")
 
    This will open up a window showing where your drawable resources are saved in your computer. Paste a copy of the image file in this folder.
 
-   ![alt text](screenshots/screenshot00006.png “Folder showing where resources are saved“)
+   ![alt text](screenshots/screenshot00006.png "Folder showing where resources are saved")
 
    We can now use this file in our project!
 
 6. Add the Image View
 
-   ![alt text](screenshots/screenshot00007.png “the image file is now in our project“)
+   ![alt text](screenshots/screenshot00007.png "the image file is now in our project")
 
    In order to display images in our app, we need to add an `ImageView`. Like `TextView`, `ImageView` is a _View_ and it allows us to specify how we want our image to be displayed.
 
@@ -92,13 +91,13 @@ Let’s Start Building the App Layout
 
    In order for the image view to appear below our `TextViews`, let’s add an ID, margins and `centerInParent`
 
-   ![alt text](screenshots/screenshot00008.png “our image is now in the centre“)
+   ![alt text](screenshots/screenshot00008.png "our image is now in the centre")
 
 7. Change the background colour
 
    In the `RelativeLayout` tag, let’s specify the background colour as `android:background=“#EFBE57”`
 
-   ![alt text](screenshots/screenshot00009.png “new background colour“)
+   ![alt text](screenshots/screenshot00009.png "new background colour")
 
    That’s all it is required to change the background, you can also change the background to another image etc.
 
@@ -108,11 +107,11 @@ Let’s Start Building the App Layout
 
    Start typing `<Button…` and press enter to select the first option.
 
-   ![alt text](screenshots/screenshot000010.png “select button“)
+   ![alt text](screenshots/screenshot00010.png "select button")
 
    Then fill in the details like so:
-
-   ![alt text](screenshots/screenshot000011.png “select button“)
+   
+   ![alt text](screenshots/screenshot00011.png "select button")
 
    Add another button, this time labelling it as `button_add`
 
@@ -120,13 +119,13 @@ Let’s Start Building the App Layout
 
    This time, let’s add a `LinearLayout`.
 
-   ![alt text](screenshots/screenshot000012.png “nested LinearLayout“)
+   ![alt text](screenshots/screenshot00012.png "nested LinearLayout")
 
    `LinearLayout`s are useful when we want to display our views in a linear-fashion, be it horizontally or vertically. Unlike the `RelativeLayout` where you had to specify the relationships of the views, there is no need to do this in a `LinearLayout` as the following views are always placed below (in a vertical `LinearLayout`) or on the right of (in a horizontal `LinearLayout`) of the view before it.
 
    As we want our add button to be on the right of the minus button, a `android:orientation=“horizontal”` would work for us.
 
-   ![alt text](screenshots/screenshot000013.png “move the LinearLayout to below the Thermometer“)
+   ![alt text](screenshots/screenshot00013.png "move the LinearLayout to below the Thermometer")
 
    Like any other view, we can then specify where we’re going to place this `LinearLayout`. The benefit of using a nested layout is also evident here - notice how both views moved simultaneously?
 
@@ -144,15 +143,16 @@ Let’s Start Building the App Layout
 
    Right-click the menu on the left again and select _New\Drawable Resource File_
 
-   ![alt text](screenshots/screenshot000014.png “create new drawable“)
+   ![alt text](screenshots/screenshot00014.png "create new drawable")
 
    Name it `round_button`
 
-   ![alt text](screenshots/screenshot000015.png “specify file name“)
+   ![alt text](screenshots/screenshot00015.png "specify file name")
 
    Replace the code in the file with the following:
 
-   ```<?xml version="1.0" encoding="utf-8"?>
+   ```
+   <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
         <shape android:shape="oval">
@@ -166,21 +166,23 @@ Let’s Start Building the App Layout
             <size android:height="50dp" android:width="50dp" />
         </shape>
     </item>
-</selector>```
+</selector>
+```
 
-   ![alt text](screenshots/screenshot000016.png “creating a selector“)
+   ![alt text](screenshots/screenshot00016.png "creating a selector")
 
    Now we can apply it to our buttons by setting the drawable as a background
 
-   ![alt text](screenshots/screenshot000017.png “adding the selector drawable as background“)
+   ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
 
    We can adjust the size and spacing of the buttons to make them look a bit better
 
-   ![alt text](screenshots/screenshot000018.png “adding the selector drawable as background“)
+   ![alt text](screenshots/screenshot00018.png "adding the selector drawable as background")
 
    Now let’s create another drawable for our reset button as we don’t want this button to be a round button. This time around, we’ll make it a rounded rectangle (so `rectangular_button` will make a good name) with the following code:
 
-   ```<?xml version="1.0" encoding="utf-8"?>
+   ```
+   <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
@@ -196,17 +198,18 @@ Let’s Start Building the App Layout
             <corners android:radius="8dp" />
         </shape>
     </item>
-</selector>```
+</selector>
+```
 
-   ![alt text](screenshots/screenshot000019.png “rectangular_button“)
+   ![alt text](screenshots/screenshot00019.png "rectangular_button")
 
    Add it to the reset button as a background like before.
 
-   ![alt text](screenshots/screenshot000020.png “adding the selector drawable as background“)
+   ![alt text](screenshots/screenshot00020.png "adding the selector drawable as background")
 
   And play around with the margins to make everything look a bit better!
 
-   ![alt text](screenshots/screenshot000021.png “Adjust the margins“)
+   ![alt text](screenshots/screenshot00021.png "Adjust the margins")
 
 
 
