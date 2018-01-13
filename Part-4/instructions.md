@@ -119,7 +119,7 @@ Our code should now look something like this:
    ```
    private static final int MINIMUM_TEMPERATURE = 18;
    private static final int MAXIMUM_TEMPERATURE = 30;
-  ```
+   ```
 
    _`static final` indicates that these values cannot be changed programatically._
 
