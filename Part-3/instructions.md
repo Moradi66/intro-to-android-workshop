@@ -1,4 +1,3 @@
-# intro-to-android-workshop
 ## Part three
 
 Adding Logic to the App
@@ -6,9 +5,9 @@ Adding Logic to the App
 
 Now let’s start writing the Java code!
 
-1. Locate the views without our layout and create fields
+#### 1. Locate the views without our layout and create fields
 
-   When we created our project, Android Studio had generated the `MainActivity.java` file for us. 
+   When we created our project, Android Studio had generated the `MainActivity.java` file for us.
 
    ![alt text](../Part-1/screenshots/screenshot00007.png "Original file")
 
@@ -38,7 +37,7 @@ Now let’s start writing the Java code!
 
    ![alt text](screenshots/screenshot00001.png "findViewById")
 
-2. Set an `onClickListener` to the plus button
+#### 2. Set an `onClickListener` to the plus button
 
    An `onClickListener` allows us to specify what should happen when the user clicks on our views. Here, we’ll assign it to our add button; you can also add `onClickListener` to any other view.
 
@@ -57,7 +56,7 @@ Now let’s start writing the Java code!
 
    For now, let’s add a `Toast`. A `Toast` is a little message at the bottom of the screen.
 
-   Inside the `onClick` method, add the following: 
+   Inside the `onClick` method, add the following:
 
    ```    
    Toast.makeText(getApplicationContext(), “+1”, Toast.LENGTH_SHORT).show();
@@ -69,7 +68,7 @@ Now let’s start writing the Java code!
 
    Now run the app and click the add button. You should see a message saying “+1” every time you click on the button.
 
-3. Add onClickListeners to the minus and reset button
+#### 3. Add onClickListeners to the minus and reset button
 
    Repeat Step 2 for the other buttons. For the minus button, set the message to “-1” and the reset button “reset” so as to differentiate the different method calls.
 
