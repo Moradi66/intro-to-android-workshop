@@ -27,7 +27,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
    // set minimum temperature & update text
     temperature = 18;
     temperatureDisplay.setText(String.valueOf(temperature));
-    ```
+   ```
 
    You can add any integer value instead of 18 if you like!
 
@@ -99,7 +99,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
     temperatureDisplay.setText(String.valueOf(temperature));
     // show a toast to inform user
     Toast.makeText(this, "Temperature Reset", Toast.LENGTH_SHORT).show();
-    ```
+   ```
 
    Run the app and check that the toast appears and the temperature label is reset.
 
@@ -138,7 +138,7 @@ Our code should now look something like this:
     }
     // update the display
     temperatureDisplay.setText(String.valueOf(temperature));
-    ```
+   ```
 
 Similarly, we perform the same checks for the `decreaseTemperature` method:
 
@@ -150,7 +150,7 @@ Similarly, we perform the same checks for the `decreaseTemperature` method:
     }
     // update the display
     temperatureDisplay.setText(String.valueOf(temperature));
-    ```
+   ```
 
    Our code should now look something like this:
 
