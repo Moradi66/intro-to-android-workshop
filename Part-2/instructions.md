@@ -71,7 +71,7 @@ Let’s Start Building the App Layout
 
    ![alt text](screenshots/screenshot00005.png "Right click")
 
-   Close to the bottom there is a _Revel in Finder_ option. Select this. 
+   Close to the bottom there is a _Reveal in Finder_ option. Select this. 
    
    ![alt text](screenshots/screenshot00004.png "Menu options")
 
