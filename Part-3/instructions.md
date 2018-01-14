@@ -31,7 +31,7 @@ Now let’s start writing the Java code!
     plusButton = findViewById(R.id.button_add);
     minusButton = findViewById(R.id.button_minus);
     resetButton = findViewById(R.id.button_reset);
-    ```
+   ```
 
    Our app should look like this so far:
 
@@ -50,7 +50,7 @@ Now let’s start writing the Java code!
          // your method here
       }
     });
-    ```
+  ```
 
    Now whenever the button is pressed, the `onClick` method is triggered. We can put our desired action within this.
 
