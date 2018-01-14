@@ -1,25 +1,24 @@
-# intro-to-android-workshop
 ## Part two
 
 Let’s Start Building the App Layout
 ------
 
-1. Open the layout file
+#### 1. Open the layout file
 
    Navigate to `activity_main.xml` and double click to open it.
-   
+
    ![alt text](screenshots/screenshot00001.png "Open the layout file")
 
    The file contains a `<ConstraintLayout>` and a `<TextView>`
       + Android Studio has automatically generated this. ConstraintLayout is a very powerful layout for complicated screens but we do not need something as complex as a ConstraintLayout yet so let’s change this to `<RelativeLayout>`
 
-2. Change the layout to a Relative layout
+#### 2. Change the layout to a Relative layout
 
    Select the start of the `<ConstraintLayout>` and enter `RelativeLayout`. Android Studio should automatically change the closing tag for you.
 
    ![alt text](screenshots/screenshot00002.png "Change the layout to a Relative layout")
 
-3. Amend the TextView
+#### 3. Amend the TextView
 
    Change the `android:text` value from `Hello World!` to `Temperature`
 
@@ -39,7 +38,7 @@ Let’s Start Building the App Layout
 
    **Note**: You cannot have uppercase characters or spaces in the name. Therefore in order for the names to remain readable while making them more meaningful, we’ve used the underscore to separate the words.
 
-4. Add another TextView
+#### 4. Add another TextView
 
    ![alt text](screenshots/screenshot00003.png "Add another TextView")
 
@@ -65,14 +64,14 @@ Let’s Start Building the App Layout
 
    Now that this is done, we’ll need to give this view an ID too.
 
-5. Import the Image
+#### 5. Import the Image
 
    Locate the `res/drawable` folder in the sidebar and right click. You’ll see this:
 
    ![alt text](screenshots/screenshot00005.png "Right click")
 
-   Close to the bottom there is a _Reveal in Finder_ option. Select this. 
-   
+   Close to the bottom there is a _Reveal in Finder_ option. Select this.
+
    ![alt text](screenshots/screenshot00004.png "Menu options")
 
    This will open up a window showing where your drawable resources are saved in your computer. Paste a copy of the image file in this folder.
@@ -81,7 +80,7 @@ Let’s Start Building the App Layout
 
    We can now use this file in our project!
 
-6. Add the Image View
+#### 6. Add the Image View
 
    ![alt text](screenshots/screenshot00007.png "the image file is now in our project")
 
@@ -93,7 +92,7 @@ Let’s Start Building the App Layout
 
    ![alt text](screenshots/screenshot00008.png "our image is now in the centre")
 
-7. Change the background colour
+#### 7. Change the background colour
 
    In the `RelativeLayout` tag, let’s specify the background colour as `android:background=“#EFBE57”`
 
@@ -101,7 +100,7 @@ Let’s Start Building the App Layout
 
    That’s all it is required to change the background, you can also change the background to another image etc.
 
-8. Add Buttons
+#### 8. Add Buttons
 
    Let’s add buttons to allow users to interact with our app.
 
@@ -110,7 +109,7 @@ Let’s Start Building the App Layout
    ![alt text](screenshots/screenshot00010.png "select button")
 
    Then fill in the details like so:
-   
+
    ![alt text](screenshots/screenshot00011.png "select button")
 
    Add another button, this time labelling it as `button_add`
@@ -131,15 +130,15 @@ Let’s Start Building the App Layout
 
    After you’ve done this, add another button and name it `button_reset`
 
-###Bonus: Let’s make the buttons pretty
+### Bonus: Let’s make the buttons pretty
 
    The default colour and shape for buttons might not work best for our app. We can change both the colour and shape of our buttons very easily by using an XML drawable called a `selector`.
 
-   Like how we’re building our layouts in XML, Android Studio also allows us to build drawables in XML. The `selector` allows us to specify the appearance of this drawable at different states - like when the button is pressed and when it isn’t pressed. Within this drawable we’ll have a `shape` tag. We can create an XML drawable simply as a `shape` without the `selector`. 
+   Like how we’re building our layouts in XML, Android Studio also allows us to build drawables in XML. The `selector` allows us to specify the appearance of this drawable at different states - like when the button is pressed and when it isn’t pressed. Within this drawable we’ll have a `shape` tag. We can create an XML drawable simply as a `shape` without the `selector`.
 
   For now, let’s have a look at how we can build this `selector` with the shapes.
 
-9. Create a selector
+#### 9. Create a selector
 
    Right-click the menu on the left again and select _New\Drawable Resource File_
 

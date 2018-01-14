@@ -1,30 +1,29 @@
-# intro-to-android-workshop
 ## Part one
 
 Setting Up The Project
 ------
 
-1. Open Android Studio
+#### 1. Open Android Studio
 
    ![alt text](screenshots/screenshot00001.png "Open Android Studio")
 
-2. Create new project
+#### 2. Create new project
 
    Select the 1st option - __Start a new Android Studio Project__
 
-3. Enter application name and domain name
+#### 3. Enter application name and domain name
 
    ![alt text](screenshots/screenshot00002.png "Enter project name and domain name")
 
    Feel free to name the app with any name that you like!
-   Look under **Package name**: You will see the text here update as you make changes in the *Application name* and *Company domain* fields. 
+   Look under **Package name**: You will see the text here update as you make changes in the *Application name* and *Company domain* fields.
    This will be the unique name of your application package.
 
    **Note:** Uncheck the __Include Kotlin support__ box. This workshop will be in Java, so we don’t need Kotlin in our project at this point.
 
    Press **Next** when you are ready.
 
-4. Set minimum API
+#### 4. Set minimum API
 
    ![alt text](screenshots/screenshot00003.png "Set minimum API")
 
@@ -44,7 +43,7 @@ Setting Up The Project
 
    Press **Next**.
 
-5. Choose an Activity
+#### 5. Choose an Activity
 
    ![alt text](screenshots/screenshot00005.png "Choose an Activity")
 
@@ -54,7 +53,7 @@ Setting Up The Project
 
    Press **Next** when you are done.
 
-6. Review Activity details and Finish!
+#### 6. Review Activity details and Finish!
 
    ![alt text](screenshots/screenshot00006.png "Review activity details and finish")
 

@@ -1,4 +1,3 @@
-# intro-to-android-workshop
 ## Part four
 
 Adding More Logic to the App
@@ -6,13 +5,13 @@ Adding More Logic to the App
 
 In the final part of the workshop, we’ll have the temperature value at the top of the screen update whenever the add and minus buttons are clicked, and the value reset when the reset button is pressed.
 
-1. Replace the Toasts with methods
+#### 1. Replace the Toasts with methods
 
    In order to make our code more readable, let’s separate the actions for each of our `onClickListeners` into separate methods - `increaseTemperature()`, `decreaseTemperature()` and `resetTemperature()` like so:
 
    ![alt text](screenshots/screenshot00001.png "Add new methods")
 
-2. Create a global variable and set a starting temperature
+#### 2. Create a global variable and set a starting temperature
 
    Below all the previously declared fields, add the following:
 
@@ -39,9 +38,9 @@ In the final part of the workshop, we’ll have the temperature value at the top
    ![alt text](screenshots/screenshot00002.png "Declaring a temperature variable")
 
 
-3. Add the logic for the add button
+#### 3. Add the logic for the add button
 
-   We want the temperature to increase by one when we press the add button. 
+   We want the temperature to increase by one when we press the add button.
 
    You can of course, just update the text in the display directly with `temperatureDisplay.setText(temperature+1)`. Give this a go. What did you notice?
 
@@ -65,7 +64,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
    temperatureDisplay.setText(String.valueOf(temperature));
    ```
 
-4. Add the logic for the minus button
+#### 4. Add the logic for the minus button
 
    We want the temperature to decrease by one when we press the minus button. Just like before, we need to 1) Update the temperature variable and 2) Display the updated value
 
@@ -87,7 +86,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
    temperatureDisplay.setText(String.valueOf(temperature));
    ```
 
-5. Add the logic for the reset button
+#### 5. Add the logic for the reset button
 
    When we press _reset_, we want the temperature to be reset to the original temperature. Sometimes the user might press the reset button when it’s already at the original temperature. In such cases, it’s good to give some feedback to the user, so let’s leave the toast here but update the message.
 
@@ -112,7 +111,7 @@ Our code should now look something like this:
 
 ### Bonus: Set a minimum and maximum temperature
 
-6. Add a static variable for the minimum and maximum temperature
+#### 6. Add a static variable for the minimum and maximum temperature
 
    At the start of the file, add the following:
 
