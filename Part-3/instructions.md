@@ -17,7 +17,7 @@ Now let’s start writing the Java code!
 
    Outside of the `onCreate` method, we declare the fields as such:
 
-   ```  
+   ```java
    private TextView temperatureDisplay;
    private Button plusButton;
    private Button minusButton;
@@ -26,7 +26,7 @@ Now let’s start writing the Java code!
 
    And in the onCreate, we assign the fields with the following references:
 
-   ```    
+   ```java   
     temperatureDisplay = findViewById(R.id.temperature_value);
     plusButton = findViewById(R.id.button_add);
     minusButton = findViewById(R.id.button_minus);
@@ -43,7 +43,7 @@ Now let’s start writing the Java code!
 
    Start by typing `plusButton.setOnClickListener(new OnClickListener` - when you press enter, Android Studio should populate the remaining lines for you. If not, copy and paste the below:
 
-   ```    
+   ```java   
    plusButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -58,7 +58,7 @@ Now let’s start writing the Java code!
 
    Inside the `onClick` method, add the following:
 
-   ```    
+   ```java    
    Toast.makeText(getApplicationContext(), “+1”, Toast.LENGTH_SHORT).show();
    ```
 

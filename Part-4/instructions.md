@@ -15,7 +15,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
 
    Below all the previously declared fields, add the following:
 
-   ```  
+   ```java  
    private int temperature;
    ```
 
@@ -23,7 +23,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
 
    Let’s set an initial value in our `onCreate` method and update the view with it:
 
-   ```    
+   ```java    
    // set minimum temperature & update text
     temperature = 18;
     temperatureDisplay.setText(String.valueOf(temperature));
@@ -48,19 +48,19 @@ In the final part of the workshop, we’ll have the temperature value at the top
 
    In order to update the variable, we can simply add the following line:
 
-   ```
+   ```java
    temperature++;
    ```
 
    This is equivalent to writing this:
 
-   ```
+   ```java
    temperature = temperature + 1;
    ```
 
    Now that we’ve updated the variable, let’s update our temperature label view as well:
 
-   ```
+   ```java
    temperatureDisplay.setText(String.valueOf(temperature));
    ```
 
@@ -70,19 +70,19 @@ In the final part of the workshop, we’ll have the temperature value at the top
 
    In order to update the variable, we can simply add the following line:
 
-   ```
+   ```java
    temperature—-;
    ```
 
    This is equivalent to writing this:
 
-   ```
+   ```java
    temperature = temperature - 1;
    ```
 
    Now that we’ve updated the variable, let’s update our temperature label view as well:
 
-   ```
+   ```java
    temperatureDisplay.setText(String.valueOf(temperature));
    ```
 
@@ -92,7 +92,7 @@ In the final part of the workshop, we’ll have the temperature value at the top
 
    In our `resetTemperature` method, add the following code:
 
-   ```    
+   ```java    
    // reset the temperature value to the minimum temperature
     temperature = MINIMUM_TEMPERATURE;
     // update the display
@@ -115,7 +115,7 @@ Our code should now look something like this:
 
    At the start of the file, add the following:
 
-   ```
+   ```java
    private static final int MINIMUM_TEMPERATURE = 18;
    private static final int MAXIMUM_TEMPERATURE = 30;
    ```
@@ -130,7 +130,7 @@ Our code should now look something like this:
 
    In our `increaseTemperature` method, let’s add the following code:
 
-   ```    
+   ```java    
    // if the current temperature is below the maximum temperature
     if (temperature < MAXIMUM_TEMPERATURE) {
       // increase temperature by 1
@@ -140,9 +140,9 @@ Our code should now look something like this:
     temperatureDisplay.setText(String.valueOf(temperature));
     ```
 
-    Similarly, we perform the same checks for the `decreaseTemperature` method:
+Similarly, we perform the same checks for the `decreaseTemperature` method:
 
-   ```    
+   ```java    
    // if the current temperature is above the minimum temperature
     if (temperature > MINIMUM_TEMPERATURE) {
       // decrease temperature by 1

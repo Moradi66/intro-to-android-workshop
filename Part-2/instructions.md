@@ -150,7 +150,7 @@ Let’s Start Building the App Layout
 
    Replace the code in the file with the following:
 
-   ```
+   ```xml
    <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
@@ -180,7 +180,7 @@ Let’s Start Building the App Layout
 
    Now let’s create another drawable for our reset button as we don’t want this button to be a round button. This time around, we’ll make it a rounded rectangle (so `rectangular_button` will make a good name) with the following code:
 
-   ```
+   ```xml
    <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
