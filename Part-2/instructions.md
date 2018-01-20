@@ -49,7 +49,7 @@ Let’s Start Building the App Layout
 
    Let’s add a margin - with `android:layout_margin = 8dp`
    
-    We want this to be the most prominent view on our screen, so let’s specify the text size with `android:textSize = 80sp`. We can also specify whether this is **bold** or _italics_ - let’s have this **bold** so set the `android:textStyle = bold`.
+   We want this to be the most prominent view on our screen, so let’s specify the text size with `android:textSize = 80sp`. We can also specify whether this is **bold** or _italics_ - let’s have this **bold** so set the `android:textStyle = bold`.
 
    *Note*: `dp` and `sp` are units of measurements. `dp` stands for _Density pixel_ while `sp` stands for _Scalable Pixel_. We often use `dp` for sizes of views and spaces in between, and `sp` for text only.
 
@@ -88,7 +88,7 @@ Let’s Start Building the App Layout
 
    We also want this to be in the centre, so set `android:layout_centerHorizontal = true`
 
-   Let’s enter something here - with `android:text = Temperate`
+   Let’s enter something here - with `android:text = Temperature`
 
    Notice that the new view overlaps the preview view? We now need to tell the layout to place our new TextView below the previous TextView.
 
@@ -187,7 +187,7 @@ Let’s Start Building the App Layout
 
    We’ll like to have the buttons side-by-side so let’s put them in a nested layout. Remember when we started we created a layout called `RelativeLayout`? A nested layout refers to a layout within a layout.
 
-   This time, let’s add a `LinearLayout`.
+   This time, let’s add a `LinearLayout` and place all our buttons within it.
 
    ![alt text](screenshots/screenshot00012.png "nested LinearLayout")
 
@@ -333,12 +333,6 @@ Let’s Start Building the App Layout
 
    ![alt text](screenshots/screenshot00016.png "creating a selector")
 
-   Now we can apply it to our buttons by setting the drawable as a background
-
-   ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
-
-   We can adjust the size and spacing of the buttons to make them look a bit better
-
    Now let’s create another drawable for our reset button as we don’t want this button to be a round button. This time around, we’ll make it a rounded rectangle (so `rectangular_button` will make a good name) with the following code:
 
    ```xml
@@ -362,16 +356,12 @@ Let’s Start Building the App Layout
 ```
 
    ![alt text](screenshots/screenshot00019.png "rectangular_button")
-
-   Add it to the reset button as a background like before.
-
-   ![alt text](screenshots/screenshot00020.png "adding the selector drawable as background")
-
-  And play around with the margins to make everything look a bit better!
-
-   ![alt text](screenshots/screenshot00021.png "Adjust the margins")
-
-
+   
+   Now we can apply it to our buttons by setting the drawable as a background - the round selector to the add and minus buttons, and the rectangular selector to the reset button.
+   
+   ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
+   
+   We can then adjust the size and spacing of the buttons to make them look a bit better if necessary.
 
 If you run the app now, you’ll see all your changes on your emulator/phone.
 
