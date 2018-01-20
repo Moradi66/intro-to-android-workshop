@@ -31,11 +31,11 @@
 
 
     <ImageView
-            android:id="@+id/thermometer_image"
+            android:id="@+id/home_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/home"
-            android:contentDescription="Image of thermometer"
+            android:contentDescription="Home Icon"
             android:layout_above="@id/temperature_label"
             android:layout_centerHorizontal="true"
             />
@@ -72,7 +72,6 @@
                 android:id="@+id/button_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:background="@drawable/rectangular_button"
                 android:layout_margin="8dp"
                 android:text="Reset"
