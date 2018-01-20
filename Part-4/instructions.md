@@ -163,3 +163,5 @@ Run and app and play around with it:
 
 
 Congratulations! You have completed your first app! :)
+
+**Next Steps**: Why not check out these other [Android Learning Resources](../resources.md)?
