@@ -41,21 +41,21 @@ Let’s Start Building the App Layout
 
 #### 3. Amend the TextView
 
-   Change the `android:text` value from `Hello World!` to `Temperature`
+   Change the `android:text` value from `Hello World!` to `26`
 
    We can delete the `app:layout` lines - these were originally for the ConstraintLayout and were used to define which part of the screen the TextView shows.
 
-   Let’s make this in the centre - with `android:layout_centerHorizontal = true`
+   Let’s make this in the centre - with `android:layout_centerInParent = true`
 
-   It’s too close to the top so let’s add a margin - with `android:marginTop = 24dp`
-
-   Let’s also increase the font size - with `android:textSize = 16sp`
+   Let’s add a margin - with `android:layout_margin = 8dp`
+   
+    We want this to be the most prominent view on our screen, so let’s specify the text size with `android:textSize = 80sp`. We can also specify whether this is **bold** or _italics_ - let’s have this **bold** so set the `android:textStyle = bold`.
 
    *Note*: `dp` and `sp` are units of measurements. `dp` stands for _Density pixel_ while `sp` stands for _Scalable Pixel_. We often use `dp` for sizes of views and spaces in between, and `sp` for text only.
 
    For more information, feel free to read the explanation in the [material.io guidelines](https://material.io/guidelines/layout/units-measurements.html)
 
-   Add an `android:id` to this TextView - doing so will allow us to locate and identify our TextView in code. Let’s call this `@+id/temperature_label`
+   Add an `android:id` to this TextView - doing so will allow us to locate and identify our TextView in code. Let’s call this `@+id/temperature_value`
 
    **Note**: You cannot have uppercase characters or spaces in the name. Therefore in order for the names to remain readable while making them more meaningful, we’ve used the underscore to separate the words.
    
@@ -63,13 +63,15 @@ Let’s Start Building the App Layout
    
    ```xml
    <TextView
-            android:id="@+id/temperature_label"
+            android:id="@+id/temperature_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Temperature"
-            android:layout_marginTop="24dp"
-            android:textSize="16sp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_margin="8dp"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:text="26"
+            />
    ```
 
 #### 4. Add another TextView
@@ -86,15 +88,13 @@ Let’s Start Building the App Layout
 
    We also want this to be in the centre, so set `android:layout_centerHorizontal = true`
 
-   Let’s enter something here - with `android:text = 26`
-
-   We want this to be more prominent than our _Temperature_ view, so let’s specify the text size to _36sp_. We can also specify whether this is **bold** or _italics_ - let’s have this **bold** so set the `android:textStyle = bold`.
+   Let’s enter something here - with `android:text = Temperate`
 
    Notice that the new view overlaps the preview view? We now need to tell the layout to place our new TextView below the previous TextView.
 
-   In order to do so, we need to enter `android:layout_below` and after `=` enter the ID of the TextView we want to align below. As we’ve named the first TextView which says “Temperature” `@+id/temperature_label`, we can start typing `temperature_label` and Android Studio will automatically complete this for you.
+   In order to do so, we need to enter `android:layout_above` and after `=` enter the ID of the TextView we want to align above. As we’ve named the first TextView which says “26” `@+id/temperature_value`, we can start typing `temperature_value` and Android Studio will automatically complete this for you.
 
-   **Note**: It will now say this - `android:layout_below = @id/temperature_label`. Where has the `+` gone? Well, when we’re defining the name of the layout, we have to enter `@+id` at the start to specify _adding a new ID_. That’s why when we refer to this after creation we no longer need to tell Android Studio to add a new ID.
+   **Note**: It will now say this - `android:layout_above = @id/temperature_value`. Where has the `+` gone? Well, when we’re defining the name of the layout, we have to enter `@+id` at the start to specify _adding a new ID_. That’s why when we refer to this after creation we no longer need to tell Android Studio to add a new ID.
 
    Now that this is done, we’ll need to give this view an ID too.
    
@@ -102,15 +102,14 @@ Let’s Start Building the App Layout
    
    ```xml
    <TextView
-            android:id="@+id/temperature_value"
+            android:id="@+id/temperature_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:text="Temperature"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/temperature_label"
-            android:text="26"
+            android:layout_above="@id/temperature_value"
             />
    ```
    
@@ -138,33 +137,39 @@ Let’s Start Building the App Layout
 
    In order to display images in our app, we need to add an `ImageView`. Like `TextView`, `ImageView` is a _View_ and it allows us to specify how we want our image to be displayed.
 
-   We specify which image file to use by entering the file name in `android:src` - so `android:src=“@drawable/thermometer_image` will allow us to display our thermometer image.
+   We specify which image file to use by entering the file name in `android:src` - so `android:src=“@drawable/home_image` will allow us to display our thermometer image.
 
-   In order for the image view to appear below our `TextViews`, let’s add an ID, margins and `centerInParent`. Try _thermometer_image_, _16dp_ and _true_ respectively, like so: 
+   In order for the image view to appear above our `TextViews`, let’s add an ID, positioning and `centerInParent`. Try _home_image_, `android:layout_above="@id/temperature_label"` and _true_ respectively, like so: 
    
    ```xml
    <ImageView
-            android:id="@+id/thermometer_image"
+            android:id="@+id/home_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/thermometer_image"
-            android:layout_margin="16dp"
-            android:layout_centerInParent="true"
+            android:src="@drawable/home"
+            android:layout_above="@id/temperature_label"
+            android:layout_centerHorizontal="true"
             />
    ```
-   **Note:** As an accessibility best practice, it is also advisable to add a `contentDescription`, e.g. `android:contentDescription="Image of thermometer"`. This allows for the `ImageView` to be _translated_ by accessibility software for visually impaired users.
+   **Note:** As an accessibility best practice, it is also advisable to add a `contentDescription`, e.g. `android:contentDescription="Home Icon"`. This allows for the `ImageView` to be _translated_ by accessibility software for visually impaired users.
 
    ![alt text](screenshots/screenshot00008.png "our image is now in the centre")
+   
+   If you like, repeat steps 5 & 6 for the other image called `dashboard.png`. The new image view properties should be something like this:
+   
+   ```xml
+   <ImageView
+            android:id="@+id/dashboard_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dashboard"
+            android:contentDescription="Dashboard Image"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            />
+   ```
 
-#### 7. Change the background colour
-
-   In the `RelativeLayout` tag, let’s specify the background colour as `android:background=“#EFBE57”`
-
-   ![alt text](screenshots/screenshot00009.png "new background colour")
-
-   That’s all it is required to change the background, you can also change the background to another image etc.
-
-#### 8. Add Buttons
+#### 7. Add Buttons
 
    Let’s add buttons to allow users to interact with our app.
 
@@ -177,6 +182,8 @@ Let’s Start Building the App Layout
    ![alt text](screenshots/screenshot00011.png "select button")
 
    Add another button, this time labelling it as `button_add`
+   
+   After you’ve done this, add another button and name it `button_reset`
 
    We’ll like to have the buttons side-by-side so let’s put them in a nested layout. Remember when we started we created a layout called `RelativeLayout`? A nested layout refers to a layout within a layout.
 
@@ -188,11 +195,8 @@ Let’s Start Building the App Layout
 
    As we want our add button to be on the right of the minus button, a `android:orientation=“horizontal”` would work for us.
 
-   ![alt text](screenshots/screenshot00013.png "move the LinearLayout to below the Thermometer")
-
    Like any other view, we can then specify where we’re going to place this `LinearLayout`. The benefit of using a nested layout is also evident here - notice how both views moved simultaneously?
 
-   After you’ve done this, add another button and name it `button_reset`
    
    Your file should now look something like this:
    
@@ -202,74 +206,88 @@ Let’s Start Building the App Layout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EFBE57"
         tools:context="com.android.thermostat.MainActivity"
         >
 
-    <ImageView
-            android:id="@+id/thermometer_image"
+    <TextView
+            android:id="@+id/temperature_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/thermometer_image"
-            android:layout_margin="16dp"
-            android:contentDescription="Image of thermometer"
+            android:layout_margin="8dp"
+            android:textSize="80sp"
+            android:textStyle="bold"
             android:layout_centerInParent="true"
+            android:text="26"
             />
+
 
     <TextView
             android:id="@+id/temperature_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperature"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:textSize="16sp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/temperature_value"
+            />
 
-    <TextView
-            android:id="@+id/temperature_value"
+
+    <ImageView
+            android:id="@+id/home_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:src="@drawable/home"
+            android:contentDescription="Home Icon"
+            android:layout_above="@id/temperature_label"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/temperature_label"
-            tools:text="26"
             />
+
+    <ImageView
+            android:id="@+id/dashboard_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dashboard"
+            android:contentDescription="Dashboard Image"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            />
+
 
     <LinearLayout
             android:id="@+id/button_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/thermometer_image"
+            android:layout_alignParentBottom="true"
             >
 
         <Button
                 android:id="@+id/button_minus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
                 android:text="-"
                 />
 
         <Button
-                android:id="@+id/button_add"
+                android:id="@+id/button_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Reset"
+                />
+
+        <Button
+                android:id="@+id/button_add"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
                 android:text="+"
                 />
 
     </LinearLayout>
 
-
-    <Button
-            android:id="@+id/button_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/button_holder"
-            android:layout_centerHorizontal="true"
-            android:text="Reset"
-            />
 
 </RelativeLayout>
 
@@ -283,7 +301,7 @@ Let’s Start Building the App Layout
 
   For now, let’s have a look at how we can build this `selector` with the shapes.
 
-#### 9. Create a selector
+#### 8. Create a selector
 
    Right-click the menu on the left again and select _New\Drawable Resource File_
 
@@ -320,8 +338,6 @@ Let’s Start Building the App Layout
    ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
 
    We can adjust the size and spacing of the buttons to make them look a bit better
-
-   ![alt text](screenshots/screenshot00018.png "adding the selector drawable as background")
 
    Now let’s create another drawable for our reset button as we don’t want this button to be a round button. This time around, we’ll make it a rounded rectangle (so `rectangular_button` will make a good name) with the following code:
 
