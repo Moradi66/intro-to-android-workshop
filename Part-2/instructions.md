@@ -362,3 +362,8 @@ If you run the app now, you’ll see all your changes on your emulator/phone.
 But nothing happens when you press the buttons!
 
 Let’s start to make things work - [Part three](../Part-3/instructions.md).
+
+
+
+_Credits_
+Images for project obtained from [Flat Icon](www.flaticon.com) - [Smashicons](https://www.flaticon.com/authors/smashicons)
