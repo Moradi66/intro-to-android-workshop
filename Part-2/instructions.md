@@ -366,6 +366,8 @@ Let’s Start Building the App Layout
 
    ```
    
+   ![alt text](screenshots/Screen%20Shot%202018-01-21%20at%2019.39.06.png "final view")
+   
    If you run the app now, you’ll see all your changes on your emulator/phone.
    
    But nothing happens when you press the buttons!
