@@ -77,4 +77,22 @@ We also have a `activity_main.xml` file - this will be where we’ll be defining
 Feel free to explore the folders to see what was automatically generated, and to familiarise yourself with the application components/structure.
 
 
+## Running and Testing our Application
+
+You can either run the app on your phone directly; alternatively you can run it on an emulator.
+
+   **Emulator:** For emulator set-up, please follow the following guide: [Emulator Guide](https://developer.android.com/studio/run/managing-avds.html)
+
+   **Device:** For device set-up, you will need to enable __Developer Options__ on your phone: [Enable Developer Options Guide](https://developer.android.com/studio/debug/dev-options.html#enable)
+
+Once you have set it up, you’ll just need to press the __Run App__ button:
+
+![alt text](screenshots/screenshot00009.png “Select run app”)
+
+And then select the device you want to run it on:
+
+![alt text](screenshots/screenshot00010.png “Select device“)
+
+
+
 When you are ready, let’s move on to [Part two](../Part-2/instructions.md).
