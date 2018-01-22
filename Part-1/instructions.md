@@ -81,15 +81,13 @@ Feel free to explore the folders to see what was automatically generated, and to
 
 You can either run the app on your phone directly; alternatively you can run it on an emulator.
 
-   **Emulator:** For emulator set-up, please follow the following guide: [Emulator Guide](https://developer.android.com/studio/run/managing-avds.html)
-   
-   **Device:** For device set-up, you will need to enable _Developer Options_ on your phone: [Enable Developer Options Guide](https://developer.android.com/studio/debug/dev-options.html#enable)
+To set-up a device, please follow the step 3 of the following guide: [Codebar SetUp Guide](https://codebar.github.io/android-tutorials/worksheets/0-setup/)
 
 Once you have set it up, you’ll just need to press the _Run App_ button:
 
 ![alt text](screenshots/screenshot00009.png "Select run app")
 
-And then select the device you want to run it on and press OK:
+You'll see a list of connected devices/emulators. Select the device you want to run it on and press OK:
 
 ![alt text](screenshots/screenshot00010.png "Select device")
 
