@@ -67,3 +67,9 @@
    ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
    
    We can then adjust the size and spacing of the buttons to make them look a bit better if necessary.
+   
+   
+   Your app should now look like this:
+   
+   ![alt text](../Part-4/screenshots/screenshot00006.png "Final view")
+
