@@ -23,6 +23,7 @@ Let’s Start Building the App Layout
    You should now have something that looks like this:
    
    ```xml
+   <?xml version="1.0" encoding="utf-8"?>
    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -42,8 +43,6 @@ Let’s Start Building the App Layout
 #### 3. Amend the TextView
 
    Change the `android:text` value from `Hello World!` to `26`
-
-   We can delete the `app:layout` lines - these were originally for the ConstraintLayout and were used to define which part of the screen the TextView shows.
 
    Let’s make this in the centre - with `android:layout_centerInParent = true`
 
@@ -80,21 +79,25 @@ Let’s Start Building the App Layout
 
    Go to a new line and start typing `<TextView…` - Android Studio should auto-populate the details for you. Press enter to accept.
 
-   `android:height` and `android:width` are required and must be defined. There are 2 commonly used values - `wrap_content` and `match_parent`.
+   `android:layout_height` and `android:layout_width` are required and must be defined. There are 2 commonly used values - `wrap_content` and `match_parent`.
       * `wrap_content`: the size of the view will match it’s contents
       * `match_parent `: the size of the view will match it’s parent
 
    `wrap_content` will suit our needs here.
-
-   We also want this to be in the centre, so set `android:layout_centerHorizontal = true`
+   
+   **Note**: There is also an `android:height` and `android:width` - Whereas `layout_height` and `layout_width` allows the view to scale dynamically, `height` and `width` refers to a set height and width of the view, so you would define this in `sp` or `dp`. `layout_height` and `layout_width` is still required and your app will crash without them. For more information, refer to [the documentation here](https://developer.android.com/reference/android/widget/TextView.html#attr_android%3aheight)
 
    Let’s enter something here - with `android:text = Temperature`
+   
+   And we can set the `textSize` to _16sp_
 
-   Notice that the new view overlaps the preview view? We now need to tell the layout to place our new TextView below the previous TextView.
+   Notice that the new view is right at the top of the screen left-hand corner of the screen? All new views added to the layout are aligned there. We now need to tell the layout to place our new TextView directly above the previous TextView.
 
    In order to do so, we need to enter `android:layout_above` and after `=` enter the ID of the TextView we want to align above. As we’ve named the first TextView which says “26” `@+id/temperature_value`, we can start typing `temperature_value` and Android Studio will automatically complete this for you.
 
    **Note**: It will now say this - `android:layout_above = @id/temperature_value`. Where has the `+` gone? Well, when we’re defining the name of the layout, we have to enter `@+id` at the start to specify _adding a new ID_. That’s why when we refer to this after creation we no longer need to tell Android Studio to add a new ID.
+   
+   We also want this to be in the centre, so set `android:layout_centerHorizontal = true`
 
    Now that this is done, we’ll need to give this view an ID too.
    
@@ -106,7 +109,6 @@ Let’s Start Building the App Layout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperature"
-            android:layout_marginTop="12dp"
             android:textSize="16sp"
             android:layout_centerHorizontal="true"
             android:layout_above="@id/temperature_value"
@@ -117,6 +119,12 @@ Let’s Start Building the App Layout
 
 #### 5. Import the Image
 
+   Download the following two images which we'll like to add to our project:
+   
+   ![alt text](../App/app/src/main/res/drawable/home.png "home icon")
+   
+   ![alt text](../App/app/src/main/res/drawable/dashboard.png "dashboard")
+   
    Locate the `res/drawable` folder in the sidebar and right click. You’ll see this:
 
    ![alt text](screenshots/screenshot00005.png "Right click")
@@ -125,11 +133,11 @@ Let’s Start Building the App Layout
 
    ![alt text](screenshots/screenshot00004.png "Menu options")
 
-   This will open up a window showing where your drawable resources are saved in your computer. Paste a copy of the image file in this folder.
+   This will open up a window showing where your drawable resources are saved in your computer. Move the image files you had saved at the start of this step in this folder. 
 
    ![alt text](screenshots/screenshot00006.png "Folder showing where resources are saved")
 
-   We can now use this file in our project!
+   We can now use these file in our project!
 
 #### 6. Add the Image View
 
@@ -180,20 +188,84 @@ Let’s Start Building the App Layout
    Then fill in the details like so:
 
    ![alt text](screenshots/screenshot00011.png "select button")
+   
+   ```xml
+   <Button
+                android:id="@+id/button_minus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:text="-"
+                />
+   ```
 
    Add another button, this time labelling it as `button_add`
    
+   ```xml
+   <Button
+                android:id="@+id/button_add"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:text="+"
+                />
+   ```
+   
    After you’ve done this, add another button and name it `button_reset`
+   
+   ```xml
+   <Button
+                android:id="@+id/button_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Reset"
+                />
+   ```
 
    We’ll like to have the buttons side-by-side so let’s put them in a nested layout. Remember when we started we created a layout called `RelativeLayout`? A nested layout refers to a layout within a layout.
 
    This time, let’s add a `LinearLayout` and place all our buttons within it.
+   
+   ```xml
+       <LinearLayout
+            android:id="@+id/button_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <Button
+                android:id="@+id/button_minus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:text="-"
+                />
+
+        <Button
+                android:id="@+id/button_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Reset"
+                />
+
+        <Button
+                android:id="@+id/button_add"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:text="+"
+                />
+
+    </LinearLayout>
+   ```
 
    ![alt text](screenshots/screenshot00012.png "nested LinearLayout")
 
    `LinearLayout`s are useful when we want to display our views in a linear-fashion, be it horizontally or vertically. Unlike the `RelativeLayout` where you had to specify the relationships of the views, there is no need to do this in a `LinearLayout` as the following views are always placed below (in a vertical `LinearLayout`) or on the right of (in a horizontal `LinearLayout`) of the view before it.
 
-   As we want our add button to be on the right of the minus button, a `android:orientation=“horizontal”` would work for us.
+   As we want our add button to be on the right of the minus button, a `android:orientation=“horizontal”` would work for us. You might notice that nothing changes. This is because _horizontal_ is the default orientation of the view, so even if this is not specified the view is already organised in this fashion. It is still good practice to define it to make it less ambiguous.
 
    Like any other view, we can then specify where we’re going to place this `LinearLayout`. The benefit of using a nested layout is also evident here - notice how both views moved simultaneously?
 
@@ -260,6 +332,7 @@ Let’s Start Building the App Layout
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
             >
 
         <Button
@@ -292,7 +365,15 @@ Let’s Start Building the App Layout
 </RelativeLayout>
 
    ```
-
+   
+   If you run the app now, you’ll see all your changes on your emulator/phone.
+   
+   But nothing happens when you press the buttons!
+   
+   Let’s start to make things work - [Part three](../Part-3/instructions.md).
+   
+   
+   
 ### Bonus: Let’s make the buttons pretty
 
    The default colour and shape for buttons might not work best for our app. We can change both the colour and shape of our buttons very easily by using an XML drawable called a `selector`.
@@ -362,13 +443,6 @@ Let’s Start Building the App Layout
    ![alt text](screenshots/screenshot00017.png "adding the selector drawable as background")
    
    We can then adjust the size and spacing of the buttons to make them look a bit better if necessary.
-
-If you run the app now, you’ll see all your changes on your emulator/phone.
-
-But nothing happens when you press the buttons!
-
-Let’s start to make things work - [Part three](../Part-3/instructions.md).
-
 
 
 _Credits_
