@@ -119,7 +119,7 @@ Run and app and play around with it.
 
 If you've finished all the steps above why not try these bonus tasks and let's make the app better.
 
-- [You can set a minimum and maximum temperature for your thermostat Improving our app's logic](https://github.com/funmia/intro-to-android-workshop/blob/master/Bonus/instructions-bonus-logic.md) 
+- [You can set a minimum and maximum temperature for your thermostat](https://github.com/funmia/intro-to-android-workshop/blob/master/Bonus/instructions-bonus-logic.md) 
 - [Add some custom styling to your buttons!](https://github.com/funmia/intro-to-android-workshop/blob/master/Bonus/instructions-bonus-styling.md)
 
 
