@@ -109,11 +109,18 @@ Our code should now look something like this:
    ![alt text](screenshots/screenshot00003.png "Final view")
 
 
-Run and app and play around with it:
-
-   ![alt text](screenshots/screenshot00006.png "Final view")
+Run and app and play around with it.
 
 
-Congratulations! You have completed your first app! :)
+**Congratulations! You have completed your first app! :)**
+
+
+## Bonus
+
+If you've finished all the steps above why not try these bonus tasks and let's make the app better.
+
+- [You can set a minimum and maximum temperature for your thermostat Improving our app's logic](https://github.com/funmia/intro-to-android-workshop/blob/master/Bonus/instructions-bonus-logic.md) 
+- [Add some custom styling to your buttons!](https://github.com/funmia/intro-to-android-workshop/blob/master/Bonus/instructions-bonus-styling.md)
+
 
 **Next Steps**: Why not check out these other [Android Learning Resources](../resources.md)?
