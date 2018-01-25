@@ -109,7 +109,7 @@ Our code should now look something like this:
    ![alt text](screenshots/screenshot00003.png "Final view")
 
 
-Run and app and play around with it.
+Run the app and play around with it.
 
 
 **Congratulations! You have completed your first app! 😁🎉**
