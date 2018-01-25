@@ -81,7 +81,7 @@ Feel free to explore the folders to see what was automatically generated, and to
 
 You can either run the app on your phone directly; alternatively you can run it on an emulator.
 
-To set-up a device, please follow _steps 3 & 4_ of the following guide: [Codebar SetUp Guide](https://codebar.github.io/android-tutorials/worksheets/0-setup/)
+To set-up a device, please follow **steps 3 & 4** of the following guide: [Codebar SetUp Guide](https://codebar.github.io/android-tutorials/worksheets/0-setup/)
 
 
-When you are done, come back here and let’s move on to [Part two](../Part-2/instructions.md).
+**When you are done, come back here and let’s move on to [Part two](../Part-2/instructions.md).**
